@@ -27,6 +27,7 @@ var windowMock = {
 		'replaceState': getEmptySpy()
 	},
 	'addEventListener': function (name, fn) {
+		'use strict';
 		windowMock['on' + name] = fn;
 	}
 };
