@@ -25,6 +25,9 @@ var windowMock = {
 		'state': {},
 		'pushState': getEmptySpy(),
 		'replaceState': getEmptySpy()
+	},
+	'addEventListener': function (name, fn) {
+		windowMock['on' + name] = fn;
 	}
 };
 
